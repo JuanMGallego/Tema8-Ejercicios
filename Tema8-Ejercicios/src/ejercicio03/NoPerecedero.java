@@ -19,7 +19,7 @@ public class NoPerecedero extends Productos{
 	
 	@Override
 	public String toString() {
-		return super.toString() +  "\nTipo: " + tipo + "\n\n";
+		return super.toString() +  "\nTipo: " + tipo;
 	}
 
 }

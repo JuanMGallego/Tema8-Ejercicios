@@ -17,26 +17,28 @@ public class Perecedero extends Productos {
 		this.diasACaducar = diasACaducar;
 	}
 
-	public double calcular() {
+	public double calcular(int num) {
+		
+		double suma = super.calcular(num);
 		
 		double result;
 		
 		switch (diasACaducar) {
 		
 			case 1 -> {		
-				result = precio / 4;
+				result = suma / 4;
 			}
 			
 			case 2 -> {
-				result = precio / 3;
+				result = suma / 3;
 			}
 			
 			case 3 -> {
-				result = precio / 2;
+				result = suma / 2;
 			}
 			
 			default -> {
-				result = precio;
+				result = suma;
 			}
 		
 		}
@@ -47,7 +49,7 @@ public class Perecedero extends Productos {
 	
 	@Override
 	public String toString() {
-		return super.toString() +  "\nDias restantes caducidad: " + diasACaducar + "\n\n";
+		return super.toString() +  "\nDias restantes caducidad: " + diasACaducar;
 	}
 	
 }

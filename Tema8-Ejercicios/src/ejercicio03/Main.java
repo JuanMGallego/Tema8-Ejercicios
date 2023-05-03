@@ -16,19 +16,13 @@ public class Main {
 		productos[7] = new NoPerecedero("Libro infantil", 8.45, "Libros");
 		productos[8] = new Perecedero("Pack x10 tenedores", 9.99, 23);
 		productos[9] = new NoPerecedero("Cuaderno", 1.2, "Papelería");
-		
-		System.out.println(productos[0]);
-		System.out.println(productos[1]);
-		System.out.println(productos[2]);
-		System.out.println(productos[3]);
-		System.out.println(productos[4]);
-		System.out.println(productos[5]);
-		System.out.println(productos[6]);
-		System.out.println(productos[7]);
-		System.out.println(productos[8]);
-		System.out.println(productos[9]);
-		
-		System.out.println("Precio total: " + ());
+
+		for (int i = 0; i < productos.length; i++) {
+
+			System.out.println(productos[i]);
+			System.out.println("Suma 5 productos: " + productos[i].calcular(5) + "\n\n");
+			
+		}
 		
 	}
 
