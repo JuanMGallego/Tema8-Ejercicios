@@ -31,8 +31,8 @@ public class Electrodomestico {
 		super();
 		this.precioBase = precioBase;
 		this.peso = peso;
-		this.atributoColor = color.valueOf(colorParam);
-		this.atributoConsumo = comprobarConsumoEnergetico(consumoEnergParam);
+		this.atributoColor = color.valueOf(comprobarColor(colorParam));
+		this.atributoConsumo = consumoEnerg.valueOf(comprobarConsumoEnergetico(consumoEnergParam));
 	}
 
 	public double getPrecioBase() {
@@ -51,33 +51,45 @@ public class Electrodomestico {
 		return peso;
 	}
 	
-	private char comprobarConsumoEnergetico(char letra) {
+	private String comprobarConsumoEnergetico(char letra) {
 		
 		String letraStr = String.valueOf(letra);
 		
 		switch (letraStr) {
 		
-		 case "A", "B", "C", "D", "E", "F" -> {
-			 
-			 
-			 
-		 }
+			case "A", "B", "C", "D", "E", "F" -> {
+				 
+			}
+			
+			default -> {
+				
+				letraStr = String.valueOf(atributoConsumo);
+				
+			}
 		
 		}
 		
-		return letra;
+		return letraStr;
 		
 	}
 	
 	private String comprobarColor(String color) {
 
-		if (colorSelect != color) {
-			
-			color = COLOR_DEFAULT;
-			
+		switch (color) {
+		
+		case "blanco", "negro", "rojo", "azul", "gris" -> {
+			 
 		}
 		
-		return color;
+		default -> {
+			
+			color = String.valueOf(atributoColor);
+			
+		}
+	
+	}
+	
+	return color;
 		
 	}
 	
@@ -87,11 +99,15 @@ public class Electrodomestico {
 		
 		double precioConsumo;
 		
-		double precioBase;
+		double precioTamano;
 		
 		switch (getConsumoEnerg()) {
 		
-		
+			case color.A, "B", "C", "D", "E", "F" -> {
+				
+				
+				
+			}
 		
 		}
 		
