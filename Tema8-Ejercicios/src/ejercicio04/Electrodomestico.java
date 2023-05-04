@@ -77,41 +77,91 @@ public class Electrodomestico {
 
 		switch (color) {
 		
-		case "blanco", "negro", "rojo", "azul", "gris" -> {
-			 
+			case "blanco", "negro", "rojo", "azul", "gris" -> {
+				 
+			}
+			
+			default -> {
+				
+				color = String.valueOf(atributoColor);
+				
+			}
+	
 		}
 		
-		default -> {
-			
-			color = String.valueOf(atributoColor);
-			
-		}
-	
-	}
-	
-	return color;
+		return color;
 		
 	}
 	
 	private double precioFinal() {
 		
-		double precioFinal;
+		double precioConsumo = 0;
 		
-		double precioConsumo;
+		double precioTamano = 0;
 		
-		double precioTamano;
+		switch (atributoConsumo) {
 		
-		switch (getConsumoEnerg()) {
-		
-			case color.A, "B", "C", "D", "E", "F" -> {
+			case A -> {
 				
+				precioConsumo = 100;
 				
+			}
+			
+			case B -> {
+				
+				precioConsumo = 80;
+				
+			}
+			
+			case C -> {
+				
+				precioConsumo = 60;
+				
+			}
+			
+			case D -> {
+				
+				precioConsumo = 50;
+				
+			}
+
+			case E -> {
+				
+				precioConsumo = 30;
+				
+			}
+			
+			case F -> {
+				
+				precioConsumo = 10;
+				
+			}
+			
+			default -> {
 				
 			}
 		
 		}
 		
-		return precioFinal;
+		if (peso >= 0 && peso < 20) {
+			
+            precioTamano = 10;
+            
+		} else if (peso >= 20 && peso < 50) {
+			
+			precioTamano = 50;
+			
+		} else if (peso >= 50 && peso < 80) {
+			
+			precioTamano = 80;
+			
+		} else if (peso >= 80) {
+			
+			precioTamano = 100;
+			
+		}
+
+        return precioBase + precioConsumo + precioTamano;
 		
 	}
 	
