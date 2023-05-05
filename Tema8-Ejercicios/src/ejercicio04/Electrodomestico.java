@@ -93,7 +93,7 @@ public class Electrodomestico {
 		
 	}
 	
-	private double precioFinal() {
+	protected double precioFinal() {
 		
 		double precioConsumo = 0;
 		
