@@ -8,6 +8,7 @@ public class Lavadora extends Electrodomestico {
 
 	public Lavadora() {
 		
+		super();
 		this.carga = CARGA_DEFAULT;
 		
 	}
